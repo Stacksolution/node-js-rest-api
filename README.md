@@ -91,20 +91,13 @@ Add the following code to the index.js file after app.use(bodyParser.json()) lin
 
 #### Configuring the database
 ```
-const dbConfig = require('./config/database.config.js');
+// connect to mongodb
+const dbConfig = require('./app/config/database.config.js');
 const mongoose = require('mongoose');
-
+console.log(dbConfig.url.toString());
+mongoose.connect(dbConfig.url, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
-
-// Connecting to the database
-mongoose.connect(dbConfig.url, {
-    useNewUrlParser: true
-}).then(() => {
-    console.log("Successfully connected to the database");    
-}).catch(err => {
-    console.log('Could not connect to the database. Exiting now...', err);
-    process.exit();
-});
+app.use(express.static('public'));
 ```
 Please run the server and make sure that you’re able to connect to the database -
 
