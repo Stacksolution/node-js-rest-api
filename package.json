@@ -1,0 +1,19 @@
+{
+  "name": "rest-api",
+  "version": "1.0.0",
+  "description": "This is Rest api use for testing purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "K.K ADIL KHAN AJAD",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^14.3.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
