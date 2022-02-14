@@ -30,5 +30,5 @@ app.use(function (err, req, res, next) {
 
 // listen for requests
 app.listen(process.env.PORT || 5000, function () {
-    console.log('Ready to Go !' + process.env.PORT);
+    console.log('Server running On this URL ! http://' + process.env.MONGO_HOST + ':' + process.env.PORT);
 });
